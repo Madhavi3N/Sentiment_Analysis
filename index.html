@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        h1 {
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            margin-bottom: 30px;
+            font-size: 36px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #6b6b6b;
+            background: grey;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        form {
+            background-color: #e8fcb9;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 6px 8px rgba(109, 109, 109, 0.419);
+            width: 500px;
+        }
+
+        input[type="text"],
+        textarea {
+            background-color: #616161;
+            color: #efefef;
+            border: none;
+            padding: 5px;
+            margin-bottom: 10px;
+            width: 100%;
+        }
+        input[type="submit"],
+        input[type="button"] {
+            background-color: rgb(255, 110, 110);
+            color: #fffeff;
+            padding: 5px 15px;
+            border: none;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        input[type="submit"]:hover,
+        input[type="button"]:hover {
+            background-color: #06795b;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>* Welcome to Predictor of Sentimental Analysis of Reviews *</h2>
+        <form action="/predict" method="post">
+            <label for="review">Enter your review about the product :</label>
+            <textarea id="review" name="review" rows="10" cols="50" placeholder="Your review..."></textarea><br><br>
+            <input type="button" value="Clear review" onclick="clearreview()">
+            <br><br>
+            <input type="submit" value="Predict">
+        </form>
+    </div>
+
+    <script>
+        function clearreview() {
+            document.getElementById('review').value = '';
+        }
+    </script>
+
+</body>
+</html>
